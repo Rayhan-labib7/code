@@ -1,0 +1,81 @@
+ 
+                                                                  /*--------------------|
+                                                                  |بِسْمِ الّٰلهِ الرَّحْمٰنِ الرَحِيْمِ |
+                                                                  |____________________*/
+ 
+                                                       /*--------------->Logic%2==0---------------->*/
+ 
+ 
+                                                                      //আগে যদি জানতাম
+                                                                      //      CSE
+                                                                     // তে কি আসতাম 😢*
+ 
+#include<bits/stdc++.h>
+#define ll                      long long int
+#define endl                    '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+using namespace std;
+ 
+ 
+int main()
+{
+    optimize();
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+          ll n,k,r;
+ 
+          cin>>n>>k;
+ 
+          ll guess_Xor=0;
+ 
+          for(int guess=0;guess<n;guess++)
+          {
+              ll query=guess_Xor^guess;
+ 
+              cout<<query<<endl;
+              
+              cout.flush();
+ 
+              cin>>r;
+ 
+              if(r==1)
+              {
+                  break;
+              }
+ 
+              else
+              {
+                 guess_Xor=guess_Xor^query;
+              }
+          }
+    }
+    
+  /*  code explain :
+  
+    input 5 2
+    
+    guess_Xor=0;
+                        
+    guess_Xor/cuurent_password|guess(x)|query/y (curr_password^guess)|change_password(z)(means new current_pass)|  r  | 
+                                                                                                                   
+                  0           |   0    |             0               |                    0                     |  0  |
+                                      
+                  0           |   1    |             1               |                    1                     |  0  |
+                                
+                  1           |   2    |             3               |                    2                     |  0  |
+                                
+                  2           |   3    |             1               |                    3                     |  0  |
+                                
+                  3           |   4    |             7               |                    4                     |  0  |(worst_case) */
+                                
+                                
+                                
+                                
+                                
+                                
+ 
+/*---------->HaPpY CoDiNg----------->*/
+return 0;
+}
